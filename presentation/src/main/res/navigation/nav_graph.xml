@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_nav">
+
+    <navigation
+        android:id="@+id/main_nav"
+        app:startDestination="@id/homeFragment">
+        <deepLink app:uri="@string/home_deep_link" />
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.sina.presentation.home.HomeFragment"
+            android:label="HomeFragment">
+            <deepLink app:uri="@string/home_deep_link" />
+        </fragment>
+        <fragment
+            android:id="@+id/cartFragment"
+            android:name="com.sina.presentation.cart.CartFragment"
+            android:label="CartFragment">
+            <deepLink app:uri="@string/cart_deep_link" />
+        </fragment>
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.sina.presentation.profile.ProfileFragment"
+            android:label="ProfileFragment" />
+        <fragment
+            android:id="@+id/magnetFragment"
+            android:name="com.sina.presentation.magnet.MagnetFragment"
+            android:label="MagnetFragment" />
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.sina.presentation.category.CategoryFragment"
+            android:label="CategoryFragment" />
+    </navigation>
+    <navigation
+        android:id="@+id/login_nav"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.sina.presentation.login.LoginFragment"
+            tools:layout="LoginFragment" />
+        <action
+            android:id="@+id/action_global_main_nav"
+            app:destination="@id/homeFragment" />
+    </navigation>
+    <navigation
+        android:id="@+id/search_nav"
+        app:startDestination="@id/searchFragment">
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.sina.presentation.search.ui.main.SearchFragment"
+            android:label="SearchFragment">
+            <deepLink app:uri="@string/search_deep_link" />
+        </fragment>
+        <fragment
+            android:id="@+id/searchOrderByFragment"
+            android:name="com.sina.presentation.search.ui.order.SearchOrderByFragment"
+            android:label="SearchOrderByFragment">
+            <deepLink app:uri="@string/search_order_by_deep_link" />
+        </fragment>
+        <fragment
+            android:id="@+id/searchFilterFragment"
+            android:name="com.sina.presentation.search.ui.filter.SearchFilterFragment"
+            android:label="SearchFilterFragment">
+            <deepLink app:uri="@string/search_filters_link" />
+        </fragment>
+    </navigation>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.sina.presentation.productinfo.ProductInfoFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_product_info">
+
+        <deepLink app:uri="@string/details_deep_link" />
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.sina.presentation.productlsit.ProductListFragment"
+        android:label="ProductsFragment"
+        tools:layout="@layout/fragment_product_list">
+        <deepLink app:uri="@string/products_deep_link_category" />
+
+        <!--        <deepLink app:uri="@string/products_deep_link_order_by" />-->
+
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+
+        <!--        <argument-->
+        <!--            android:name="orderBy"-->
+        <!--            app:argType="string" />-->
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.sina.presentation.setting.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting">
+        <deepLink app:uri="@string/setting_deep_link" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalCartFragment"
+        android:name="com.sina.presentation.cart.FinalCartFragment"
+        android:label="FinalCartFragment"
+        tools:layout="@layout/fragment_final_cart">
+        <deepLink app:uri="@string/final_cart_deep_link" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.sina.presentation.review.ReviewFragment"
+        android:label="ReviewFragment"
+        tools:layout="@layout/fragment_review">
+        <deepLink app:uri="@string/review_deep_link" />
+        <action
+            android:id="@+id/action_reviewFragment_to_editReviewFragment"
+            app:destination="@id/editReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editReviewFragment"
+        android:name="com.sina.presentation.review.EditReviewFragment"
+        android:label="EditReviewFragment"
+        tools:layout="@layout/fragment_edit_review">
+        <deepLink app:uri="@string/edit_review_deep_link" />
+        <argument android:name="productId" />
+        <argument android:name="reviewId" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sina.presentation.error.ErrorFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <deepLink app:uri="@string/network_deep_link" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_address"
+        android:id="@+id/addressFragment"
+        android:name="com.sina.presentation.profile.AddressFragment"
+        android:label="AddressFragment">
+        <deepLink app:uri="@string/address_deep_link" />
+        <action
+            android:id="@+id/action_addressFragment_to_additAddressFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.sina.presentation.profile.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_editAddressFragment"
+            app:destination="@id/editAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.sina.presentation.profile.EditAddressFragment"
+        android:label="EditAddressFragment" >
+        <argument
+            android:name="customerAddress"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

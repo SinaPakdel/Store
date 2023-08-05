@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LottieWidget">
+        <attr name="lottie_rawRes" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="widget_text_input_layout">
+        <attr name="hasPassword" format="boolean" />
+        <attr name="layout_hint" format="string" />
+    </declare-styleable>
+
+</resources>

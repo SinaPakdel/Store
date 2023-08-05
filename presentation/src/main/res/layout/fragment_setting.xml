@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting.SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btnSettingExit"
+            style="@style/textStyleTitle24"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableStart="@drawable/ic_close"
+            android:gravity="center_vertical"
+            android:text="@string/string_setting_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btnSettingPrivacy"
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableEnd="@drawable/ic_lock"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_privacy" />
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:orientation="vertical"
+            app:strokeColor="@color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnSettingInfo"
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_doc"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_using_condition" />
+
+
+                <LinearLayout
+                    android:id="@+id/showSettingInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyleTitle12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:text="@string/string_default_time_notif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupDefaultTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@id/three"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/three"
+                            style="@style/textStyleTitle10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_3_hours" />
+
+                        <RadioButton
+                            android:id="@+id/five"
+                            style="@style/textStyleTitle10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_5_hours" />
+
+                        <RadioButton
+                            android:id="@+id/eight"
+                            style="@style/textStyleTitle10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_8_hours" />
+
+                        <RadioButton
+                            android:id="@+id/twelve"
+                            style="@style/textStyleTitle10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_12_hours" />
+                    </RadioGroup>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyleTitle12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:text="@string/string_custom_time_notif" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderCustomTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:stepSize="1.0"
+                        android:valueFrom="1.0"
+                        android:valueTo="12.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTimeNotification"
+                        style="@style/textStyleTitle12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_time"
+                        android:drawablePadding="10dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/string_3_hours_per_round" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleButton"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:checkedButton="@id/btnToggleActivateNotification"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <Button
+                            android:id="@+id/btnToggleActivateNotification"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="فعال" />
+
+                        <Button
+                            android:id="@+id/btnToggleDeActivateNotification"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="غیر فعال" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableEnd="@drawable/ic_call"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_contacts_us" />
+
+        <include layout="@layout/layout_divider2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableEnd="@drawable/ic_bug"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_report" />
+
+        <include layout="@layout/layout_divider2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableEnd="@drawable/ic_star"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_point_justore" />
+
+        <include layout="@layout/layout_divider2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableEnd="@drawable/ic_question"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_question" />
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btnSettingLogout"
+            style="@style/textStyleTitle18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableEnd="@drawable/ic_exit"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/text_exit_customer"
+            android:textColor="#E91E63" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

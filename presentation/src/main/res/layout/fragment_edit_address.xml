@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.EditAddressFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="22dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textStyleTitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="استان" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressCity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textStyleTitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="شهر" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressCity2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textStyleTitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="آدرس پستی" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressPostal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textStyleTitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="پلاک" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/textStyleTitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="کدپستی" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddressPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnSubmitAddress"
+                style="@style/textStyleTitle18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rounded_layout_red_fill"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="ثبت آدرس"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

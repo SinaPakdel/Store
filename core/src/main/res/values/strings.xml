@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    /*deep links*/
+    <string name="details_deep_link" translatable="false">myProject://com.sina.store/details/{productId}</string>
+    <string name="products_deep_link_category" translatable="false">myProject://com.sina.store/products/{categoryId}</string>
+    <string name="products_deep_link_order_by" translatable="false">myProject://com.sina.store/products/{orderBy}</string>
+    <string name="search_deep_link" translatable="false">myProject://com.sina.store/search/</string>
+    <string name="search_order_by_deep_link" translatable="false">myProject://com.sina.store/search_order_by/</string>
+    <string name="search_filters_link" translatable="false">myProject://com.sina.store/search_filters/</string>
+    <string name="home_deep_link" translatable="false">myProject://com.sina.store/home/</string>
+    <string name="cart_deep_link" translatable="false">myProject://com.sina.store/cart/</string>
+    <string name="setting_deep_link" translatable="false">myProject://com.sina.store/setting/</string>
+    <string name="edit_review_deep_link" translatable="false">myProject://com.sina.store/edit_review/{productId}/{reviewId}/</string>
+<!--    <string name="update_review_deep_link" translatable="false">myProject://com.sina.store/edit_review/{reviewId}</string>-->
+    <string name="review_deep_link" translatable="false">myProject://com.sina.store/review/</string>
+    <string name="final_cart_deep_link" translatable="false">myProject://com.sina.store/final_cart/</string>
+    <string name="network_deep_link" translatable="false">myProject://com.sina.store/network/</string>
+    <string name="address_deep_link" translatable="false">myProject://com.sina.store/address/</string>
+
+    <string name="pls_input_values">لطفا موارد مشخص شده را وارد نمایید!</string>
+
+    <string name="txt_home">خانه</string>
+    <string name="txt_category">دسته بندی</string>
+    <string name="txt_cart">سبد</string>
+    <string name="tv_cart_product_name">نام محصول</string>
+    <string name="tv_cart_product_color">رنگ</string>
+    <string name="tv_cart_product_price">قیمت</string>
+    <string name="input_email">ایمیل خود را وارد کنید</string>
+    <string name="intro">ورود</string>
+    <string name="see_all">مشاهده همه</string>
+    <string name="txt_product">محصول</string>
+    <string name="txt_prict">2,000,000</string>
+    <string name="filter_details">جزیئات</string>
+    <string name="date">date</string>
+    <string name="price">Price</string>
+    <string name="title">title</string>
+    <string name="popularity">popularity</string>
+    <string name="rating">rating</string>
+    <string name="asc">asc</string>
+    <string name="desc">desc</string>
+    <string name="txt_item_filter">برند</string>
+    <string name="txt_order">جدیدترین</string>
+    <string name="txt_filters">فیلترها</string>
+    <string name="txt_remove_all_filters">حذف همه فیلترها</string>
+    <string name="txt_see_all">مشاهده همه</string>
+    <string name="txt_ordering">مرتب سازی</string>
+    <string name="error_email">پست الکترونیک را وارد نمایید</string>
+    <string name="email_not_valid">ایمیل معتبر نیست</string>
+    <string name="string_profile_name">سینا تبریزیان</string>
+
+    <string name="string_input_email">ایمیل خود را وارد کنید</string>
+    <string name="string_input_error">مقادیر را بدرستی وارد کنید</string>
+    <string name="string_intro">ورود</string>
+    <string name="required_message">الزامیست</string>
+    <string name="string_profile_phone_number">09961262484</string>
+    <string name="string_lists">لیست ها</string>
+    <string name="string_comments">نقد و نظرات</string>
+    <string name="string_address">آدرس ها</string>
+    <string name="string_profile_info">اطلاعات حساب کاربری</string>
+    <string name="string_gift_cards">کارت های هدیه</string>
+    <string name="string_profile_email">sample@gmail.com</string>
+    <string name="text_exit_customer">خروج از حساب کاربری</string>
+    <string name="string_question">پرسش های متداول</string>
+    <string name="string_point_justore">امتیاز به جاستور</string>
+    <string name="string_report">گزارش خطا</string>
+    <string name="string_contacts_us">تماس با ما</string>
+    <string name="string_using_condition">تنظیمات اطلاع رسانی ها</string>
+    <string name="string_privacy">حریم خصوصی</string>
+    <string name="string_setting_text">تنظیمات</string>
+    <string name="string_successful_deleted">نظر با موفقیت حذف گردید</string>
+    <string name="string_explain_your_opinion">دیدگاه خود را شرح دهید</string>
+    <string name="string_review_good_point">نقاط قوت</string>
+    <string name="string_review_bad_point">نقاط ضعف</string>
+    <string name="string_accept_circumtance">ثبت دیدگاه به معنی موافقت با قوانین جاستور است</string>
+
+    <string name="very_bad">خیلی بد</string>
+    <string name="bad">بد</string>
+    <string name="normal">معمولی</string>
+    <string name="good">خوب</string>
+    <string name="perfect">عالی</string>
+    <string name="string_go_to_cart">برو به سبد خرید</string>
+    <string name="string_buy">خرید</string>
+    <string name="string_review_successfully_added">نظر شما با موفقیت ثبت شد</string>
+
+    <string name="string_default_time_notif">تنظیم مدت زمان پیشفرض</string>
+    <string name="string_custom_time_notif">تنظیم مدت زمان دلخواه</string>
+    <string name="string_3_hours_per_round">۳ ساعت یکبار</string>
+    <string name="string_3_hours">۳ ساعت</string>
+    <string name="string_5_hours">۵ ساعت</string>
+    <string name="string_8_hours">۸ ساعت</string>
+    <string name="string_12_hours">۱۲ ساعت</string>
+    <string name="string_hours"> ساعت </string>
+    <string name="string_per">یکبار</string>
+    <string name="string_each">هر</string>
+    <string name="string_opinion_tilte">string_opinion_tilte</string>
+
+
+
+    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="poi">poi</string>
+
+
+</resources>

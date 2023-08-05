@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:fillViewport="true"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnProfileNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_bell" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/btnProfileSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_settings" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvProfileName"
+                style="@style/textStyleTitle24"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="bottom|center"
+                android:text="@string/string_profile_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvProfilePhoneNumber"
+                style="@style/textStyleTitle14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/string_profile_phone_number" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvProfileEmail"
+                style="@style/textStyleTitle12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                android:text="@string/string_profile_email" />
+
+            <include layout="@layout/layout_divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_favorite"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_lists" />
+
+                <include layout="@layout/layout_divider2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnCustomerReviews"
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_comment"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_comments" />
+
+                <include layout="@layout/layout_divider2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnCustomerAddress"
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_location"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_address" />
+
+                <include layout="@layout/layout_divider2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_gift_card"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_gift_cards" />
+
+                <include layout="@layout/layout_divider2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnProfileInfo"
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_profile"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_profile_info" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

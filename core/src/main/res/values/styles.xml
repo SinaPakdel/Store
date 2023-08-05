@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="circleImage10">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="circleImage20">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="circleImage50">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="roundedImage" parent="Widget.MaterialComponents.CardView">
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="customIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/blue_light_20</item>
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:height">40dp</item>
+        <item name="android:width">40dp</item>
+        <item name="animationMode">slide</item>
+    </style>
+
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/bg_chip_color</item>
+        <item name="android:textColor">@color/bg_chip_text_color</item>
+        <item name="checkedIconTint">@color/bg_chip_text_color</item>
+    </style>
+
+
+    <style name="textStyleTitle24" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="textStyleTitle18" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="textStyleTitle16" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="textStyleTitle14" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="textStyleTitle12" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="textStyleTitle10" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="textStyleTitle8" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/homa</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="BottomNavStyle" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/homa</item>
+    </style>
+
+    <style name="EditTextRadiusBox" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:height">68dp</item>
+
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxStrokeColor">@color/light_cream</item>
+        <item name="boxBackgroundColor">@color/light_cream</item>
+    </style>
+
+
+    <style name="ButtonRadiusBox" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:height">68dp</item>
+        <item name="android:layout_margin">22dp</item>
+        <item name="fontFamily">@font/homa</item>
+        <item name="boxBackgroundColor">#20D81B60</item>
+        <item name="cornerRadius">22dp</item>
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="8dp"
+    app:strokeColor="@color/grey_light_10"
+    app:strokeWidth="1dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingEnd="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvReviewTitle"
+            style="@style/textStyleTitle16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="قیمت بخود بالای آقای فروشنده" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvReviewPoint"
+            style="@style/textStyleTitle16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/ic_star"
+            android:drawablePadding="4dp"
+            android:gravity="end"
+            android:text="2" />
+
+        <include layout="@layout/layout_divider2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvReviewRateText"
+            style="@style/textStyleTitle12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_thumb_down"
+            android:drawablePadding="4dp"
+            android:text="بد" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvReviewDescription"
+            style="@style/textStyleTitle12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="خرید این محصول را پیشنهاد میکنم\nاین محصول بدرد نمیخورد" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

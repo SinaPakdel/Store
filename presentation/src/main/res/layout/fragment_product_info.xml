@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    tools:context=".productinfo.ProductInfoFragment">
+
+    <com.sina.core.uicomponents.widget.LoadingWidget
+        android:id="@+id/loadingWidget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/include"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvItemImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_weight="2"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvItemTitle"
+                    style="@style/textStyleTitle18"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textSize="22sp"
+                    tools:text="هدست بی سیم" />
+
+                <!--            <include layout="@layout/layout_divider2" />-->
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvProductRate"
+                    style="@style/textStyleTitle12"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_star"
+                    android:drawablePadding="8dp"
+                    android:gravity="end"
+                    android:layoutDirection="rtl"
+                    android:textDirection="rtl"
+                    android:textSize="22sp"
+                    tools:text="3.0" />
+
+                <!--            <include layout="@layout/layout_divider4" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|top"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyleTitle14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ویژگی های محصول" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvItemDescription"
+                        style="@style/textStyleTitle14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/textStyleTitle12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="دیدگاه کاربران" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProductReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:reverseLayout="true"
+                    tools:itemCount="20"
+                    tools:listitem="@layout/item_review" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnCreateReview"
+                    style="@style/textStyleTitle12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:drawableStart="@drawable/ic_arrow_left"
+                    android:drawableEnd="@drawable/ic_comment"
+                    android:drawablePadding="4dp"
+                    android:text="دیدگاه خود را درباره این محصول بنویسید" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_shadow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvItemPrice"
+                style="@style/textStyleTitle18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:drawableStart="@drawable/toman"
+                android:drawablePadding="4dp"
+                android:paddingStart="8dp"
+                tools:text="2000000" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnAddToCart"
+                style="@style/textStyleTitle18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_layout_red_fill"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="افزودن به سبد خرید"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#FF787878</color>
+    <color name="grey_light_30">#D3D6DB</color>
+    <color name="grey_light_10">#EFF0F4</color>
+
+    <color name="yellow">#ffdf00</color>
+
+    <color name="yellow_light">#FBEB52</color>
+    <color name="yellow_light_10">#E1D77B</color>
+    <color name="yellow_light_20">#959595</color>
+    <color name="yellow_light_30">#FBEB52</color>
+
+    <color name="bottom_nav_selected">#B34141</color>
+    <color name="bottom_nav_unselected">#3614B1</color>
+    <color name="blue_light_20">#415F9D</color>
+    <color name="blue_dark_20">#233B6E</color>
+
+    <color name="bgCheckedChipColor">#206200EA</color>
+    <color name="bgChipColor">@color/grey_light_30</color>
+    <color name="textCheckedChipColor">@color/blue_light_20</color>
+    <color name="textChipColor">@color/bottom_nav_unselected</color>
+    <color name="light_cream">#FFC6C6C6</color>
+
+</resources>
